@@ -1,0 +1,5 @@
+# Headers
+annee_numero_de_tirage;jour;date;numero_de_tirage_dans_le_cycle;date_de_forclusion;boule_1;boule_2;boule_3;boule_4;boule_5;etoile_1;etoile_2;boules_gagnantes;etoiles_gagnantes
+
+# data
+2016078;MARDI;27/09/2016;1;27/11/2016;41;6;13;39;9;2;12;-6-9-13-39-41-;-2-12-

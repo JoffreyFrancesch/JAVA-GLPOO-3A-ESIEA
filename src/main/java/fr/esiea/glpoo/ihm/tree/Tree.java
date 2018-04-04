@@ -24,13 +24,14 @@ import org.apache.log4j.Logger;
 import fr.esiea.glpoo.Launcher;
 import fr.esiea.glpoo.dao.CsvTirageDao;
 import fr.esiea.glpoo.dao.TirageDao;
+import fr.esiea.glpoo.ihm.MainMenu;
 import fr.esiea.glpoo.tirage.SimpleTirage;
 import fr.esiea.glpoo.tirage.Tirage;
 
 public class Tree extends JFrame {
 	private static final long serialVersionUID = 1L;
 	JFrame frame;
-	JButton btn_ramdom, btn_save;
+	JButton btn_ramdom, btn_save, btn_menu;
 	JTextArea textArea;
 	private final static Logger log = Logger.getLogger(Launcher.class);
 
@@ -60,10 +61,12 @@ public class Tree extends JFrame {
 
 		btn_ramdom = new JButton(new RandomTree());
 		btn_save = new JButton(new SaveAsPng());
+		btn_menu = new JButton(new GoToMenu());
 
 		final JPanel barreButton = new JPanel();
 		barreButton.add(btn_ramdom);
 		barreButton.add(btn_save);
+		barreButton.add(btn_menu);
 
 		DrawPanel = new MyTreePanel();
 
@@ -128,6 +131,27 @@ public class Tree extends JFrame {
 				e1.printStackTrace();
 			}
 
+		}
+
+	}
+
+	private class GoToMenu extends AbstractAction {
+		private static final long serialVersionUID = 1L;
+
+		public GoToMenu() {
+			super("Menu principal");
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			log.debug("ici actionPerformed aller au menu principal");
+			try {
+				@SuppressWarnings("unused")
+				final MainMenu menu = new MainMenu();
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+			frame.dispose();
 		}
 
 	}

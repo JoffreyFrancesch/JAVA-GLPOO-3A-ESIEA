@@ -9,7 +9,7 @@ import fr.esiea.glpoo.dao.CsvTirageDao;
 public class CsvTirageTest extends AbstractTirageDaoTest {
 
 	private final static String RESOURCES_PATH = "src/test/resources/";
-	private final static String TIRAGES_FILE_PATH = "my_euromillions.csv";
+	private final static String TIRAGES_FILE_PATH = "my_euromillions_test.csv";
 	
 	@Before
 	public void doBefore() {

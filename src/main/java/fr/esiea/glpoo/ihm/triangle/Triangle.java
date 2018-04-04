@@ -22,6 +22,7 @@ import org.apache.log4j.Logger;
 import fr.esiea.glpoo.Launcher;
 import fr.esiea.glpoo.dao.CsvTirageDao;
 import fr.esiea.glpoo.dao.TirageDao;
+import fr.esiea.glpoo.ihm.MainMenu;
 import fr.esiea.glpoo.tirage.SimpleTirage;
 import fr.esiea.glpoo.tirage.Tirage;
 
@@ -30,7 +31,7 @@ public class Triangle extends JFrame {
 	private final static Logger log = Logger.getLogger(Launcher.class);
 
 	JFrame frame;
-	JButton btn_random, btn_save;
+	JButton btn_random, btn_save, btn_menu;
 
 	MyTrianglePanel DrawPanel;
 
@@ -57,10 +58,12 @@ public class Triangle extends JFrame {
 
 		btn_random = new JButton(new RandomTriangel());
 		btn_save = new JButton(new SaveAsPng());
+		btn_menu = new JButton(new GoToMenu());
 
 		final JPanel barreButton = new JPanel();
 		barreButton.add(btn_random);
 		barreButton.add(btn_save);
+		barreButton.add(btn_menu);
 
 		DrawPanel = new MyTrianglePanel();
 
@@ -122,6 +125,27 @@ public class Triangle extends JFrame {
 				e1.printStackTrace();
 			}
 
+		}
+
+	}
+
+	private class GoToMenu extends AbstractAction {
+		private static final long serialVersionUID = 1L;
+
+		public GoToMenu() {
+			super("Menu principal");
+		}
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			log.debug("ici actionPerformed aller au menu");
+			try {
+				@SuppressWarnings("unused")
+				final MainMenu menu = new MainMenu();
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+			frame.dispose();
 		}
 
 	}
