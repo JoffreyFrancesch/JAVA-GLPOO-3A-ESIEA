@@ -18,7 +18,7 @@ Project Goal :
 What we are going to do :
 =====================
 
-We are hoping to create Fractal Tree and Sierpinski Triangle in function of LOTO results.
+We hope the function creates Fractal Trees and Sierpinski Triangles with Lotto results.
 
 There are some preview of our application : 
 
@@ -30,20 +30,20 @@ TODO LIST :
 ===========
 
 - [x] Test work 12 / 12 100%
-- [x] Tirage classes
-- [x] Dao classes
-- [ ] IHM classes
+- [x] Tirage classes 100%
+- [x] Dao classes 100%
+- [x] IHM classes 100%
 	- [x] Main Menu
 		- [x] Go to Tree button
 		- [x] Go to Triangle button
 		- [x] Show Data Table from CSV
 		- [x] Exit button
-	- [ ] Tree
+	- [x] Tree
 		- [x] Draw Panel
 		- [x] New Random tree button
-		- [ ] Save As PNG
-	- [ ] Triangle
+		- [x] Save As PNG
+	- [x] Triangle
 		- [x] Draw Panel
 		- [x] New Random triangle button
-		- [ ] Save As PNG
+		- [x] Save As PNG
 	
