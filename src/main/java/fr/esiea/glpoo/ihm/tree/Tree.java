@@ -1,22 +1,20 @@
-package fr.esiea.glpoo.ihm;
+package fr.esiea.glpoo.ihm.tree;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Desktop;
 import java.awt.Frame;
+import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileOutputStream;
+
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.List;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
-import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
@@ -36,7 +34,7 @@ public class Tree extends JFrame {
 	JTextArea textArea;
 	private final static Logger log = Logger.getLogger(Launcher.class);
 
-	MyDrawPanel DrawPanel;
+	MyTreePanel DrawPanel;
 
 	private List<Tirage> tirages;
 	private Tirage tirageEnCours = new SimpleTirage();
@@ -67,7 +65,7 @@ public class Tree extends JFrame {
 		barreButton.add(btn_ramdom);
 		barreButton.add(btn_save);
 
-		DrawPanel = new MyDrawPanel();
+		DrawPanel = new MyTreePanel();
 
 		frame.getContentPane().add(BorderLayout.SOUTH, barreButton);
 		frame.getContentPane().add(BorderLayout.CENTER, DrawPanel);
@@ -114,25 +112,19 @@ public class Tree extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO save as a png our fractal tree
-			log.info("ici action Performed Save as PNG soon....");
-			/*
-			 * JFileChooser chooser = new JFileChooser(); int retval =
-			 * chooser.showSaveDialog(btn_save); if(retval == JFileChooser.APPROVE_OPTION) {
-			 * File file = chooser.getSelectedFile(); if (file == null) { return; }
-			 * if(!file.getName().toLowerCase().endsWith(".png")) { file = new
-			 * File(file.getParentFile(),file.getName() + ".png"); } try {
-			 * textArea.write(new OutputStreamWriter(new FileOutputStream(file),"utf-8"));
-			 * Desktop.getDesktop().open(file); } catch (Exception except) {
-			 * except.printStackTrace(); } }
-			 */
+
+			log.info("ici action Performed Save as PNG");
+			File file = new File("images/tree.png");
+			file.getParentFile().mkdirs();
 			BufferedImage image = new BufferedImage(DrawPanel.getSize().width, DrawPanel.getSize().height,
 					BufferedImage.TYPE_INT_RGB);
-			DrawPanel.paint(image.getGraphics());
+			Graphics2D g2 = image.createGraphics();
+			DrawPanel.paint(g2);
+			g2.dispose();
+
 			try {
-				ImageIO.write(image, ".png", new File("src/main/resources/screen.png"));
+				ImageIO.write(image, "PNG", file);
 			} catch (IOException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 

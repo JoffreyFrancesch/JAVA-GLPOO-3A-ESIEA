@@ -1,4 +1,4 @@
-package fr.esiea.glpoo.ihm;
+package fr.esiea.glpoo.ihm.table;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;

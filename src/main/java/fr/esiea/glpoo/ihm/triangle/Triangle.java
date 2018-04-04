@@ -1,13 +1,17 @@
-package fr.esiea.glpoo.ihm;
+package fr.esiea.glpoo.ihm.triangle;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Frame;
+import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 
+import javax.imageio.ImageIO;
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -100,10 +104,23 @@ public class Triangle extends JFrame {
 		public SaveAsPng() {
 			super("Save as PNG");
 		}
-		
+
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			log.info("ici action Performed Save as PNG soon...");
+			log.info("ici action Performed Save as PNG");
+			File file = new File("images/triangle.png");
+			file.getParentFile().mkdirs();
+			BufferedImage image = new BufferedImage(DrawPanel.getSize().width, DrawPanel.getSize().height,
+					BufferedImage.TYPE_INT_RGB);
+			Graphics2D g2 = image.createGraphics();
+			DrawPanel.paint(g2);
+			g2.dispose();
+
+			try {
+				ImageIO.write(image, "PNG", file);
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
 
 		}
 

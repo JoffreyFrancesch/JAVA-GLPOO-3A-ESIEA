@@ -1,4 +1,4 @@
-package fr.esiea.glpoo.ihm;
+package fr.esiea.glpoo.ihm.tree;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 import fr.esiea.glpoo.tirage.Tirage;
 
-public class MyDrawPanel extends JPanel {
+public class MyTreePanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 
 	private int red, blue, green, depth;

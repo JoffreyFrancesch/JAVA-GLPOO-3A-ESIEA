@@ -1,4 +1,4 @@
-package fr.esiea.glpoo.ihm;
+package fr.esiea.glpoo.ihm.triangle;
 
 import java.awt.Color;
 import java.awt.Graphics;

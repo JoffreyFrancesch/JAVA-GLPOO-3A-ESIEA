@@ -12,6 +12,9 @@ import javax.swing.JPanel;
 import org.apache.log4j.Logger;
 
 import fr.esiea.glpoo.Launcher;
+import fr.esiea.glpoo.ihm.table.Table;
+import fr.esiea.glpoo.ihm.tree.Tree;
+import fr.esiea.glpoo.ihm.triangle.Triangle;
 
 public class MainMenu extends JFrame {
 
