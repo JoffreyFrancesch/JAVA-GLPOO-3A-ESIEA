@@ -62,7 +62,7 @@ public class MainMenu extends JFrame {
 		private static final long serialVersionUID = 1L;
 
 		public GoToTree() {
-			super("Arbre Fractal");
+			super("ARBRE FRACTAL");
 		}
 
 		@Override
@@ -84,7 +84,7 @@ public class MainMenu extends JFrame {
 		private static final long serialVersionUID = 1L;
 
 		public GoToTriangle() {
-			super("Triangle de Sierpiński");
+			super("TRIANGLE DE SIERPINSKI");
 		}
 
 		@Override
@@ -107,7 +107,7 @@ public class MainMenu extends JFrame {
 		private static final long serialVersionUID = 1L;
 
 		public ShowTable() {
-			super("Afficher la table des données");
+			super("TABLE DES DONNEES");
 		}
 
 		@Override
@@ -129,7 +129,7 @@ public class MainMenu extends JFrame {
 		private static final long serialVersionUID = 1L;
 
 		public ExitProg() {
-			super("Quitter le programme");
+			super("QUITTER LE PROGRAMME");
 		}
 
 		@Override

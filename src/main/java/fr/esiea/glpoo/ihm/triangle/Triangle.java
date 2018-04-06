@@ -51,7 +51,7 @@ public class Triangle extends JFrame {
 			tirageEnCours = tirages.get(0);
 		}
 
-		frame = new JFrame("Sierpinski Triangle");
+		frame = new JFrame("SIERPINSKI TRIANGLE");
 
 		frame.setExtendedState(Frame.MAXIMIZED_BOTH);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -80,7 +80,7 @@ public class Triangle extends JFrame {
 		private static final long serialVersionUID = 1L;
 
 		public RandomTriangel() {
-			super("New Random Triangle");
+			super("GENERER UN NOUVEAU TRIANGLE");
 		}
 
 		@Override
@@ -105,7 +105,7 @@ public class Triangle extends JFrame {
 		private static final long serialVersionUID = 1L;
 
 		public SaveAsPng() {
-			super("Save as PNG");
+			super("SAUVEGARDER");
 		}
 
 		@Override
@@ -133,7 +133,7 @@ public class Triangle extends JFrame {
 		private static final long serialVersionUID = 1L;
 
 		public GoToMenu() {
-			super("Menu principal");
+			super("MENU PRINCIPAL");
 		}
 		
 		@Override

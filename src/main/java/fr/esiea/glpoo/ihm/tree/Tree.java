@@ -53,7 +53,7 @@ public class Tree extends JFrame {
 			tirageEnCours = tirages.get(0);
 		}
 
-		frame = new JFrame("Fractal Tree");
+		frame = new JFrame("ARBRE");
 		textArea = new JTextArea(24, 80);
 
 		frame.setExtendedState(Frame.MAXIMIZED_BOTH);
@@ -85,7 +85,7 @@ public class Tree extends JFrame {
 		private static final long serialVersionUID = 1L;
 
 		public RandomTree() {
-			super("New Random Tree");
+			super("GENERER UN NOUVEL ARBRE");
 		}
 
 		@Override
@@ -110,7 +110,7 @@ public class Tree extends JFrame {
 		private static final long serialVersionUID = 1L;
 
 		public SaveAsPng() {
-			super("Save as PNG");
+			super("SAUVEGARDER");
 		}
 
 		@Override
@@ -139,7 +139,7 @@ public class Tree extends JFrame {
 		private static final long serialVersionUID = 1L;
 
 		public GoToMenu() {
-			super("Menu principal");
+			super("MENU PRINCIPAL");
 		}
 
 		@Override

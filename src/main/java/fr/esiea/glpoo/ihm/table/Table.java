@@ -23,7 +23,7 @@ public class Table extends JFrame {
 	JButton btn_menu;
 
 	public Table() throws Exception {
-		log.debug("Table des données du CSV");
+		log.debug("TABLE DES DONNEES CSV");
 		setTitle("Tirages");
 		setPreferredSize(new Dimension(600, 400));
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -45,7 +45,7 @@ public class Table extends JFrame {
 		private static final long serialVersionUID = 1L;
 
 		public GoToMenu() {
-			super("Menu principal");
+			super("MENU PRINCIPAL");
 		}
 		
 		@Override

@@ -14,19 +14,24 @@ public class Launcher {
 	private final static Logger logger = Logger.getLogger(Launcher.class);
 
 	public static void main(String[] args) throws Exception {
-		logger.info("Hello");
+		logger.debug("Début du main");
+		logger.debug("Initialisation du fichier CSV");
 
 		final String fileName = "src/main/resources/my_euromillions.csv";
 
 		final File file = new File(fileName);
 		final TirageDao dao = new CsvTirageDao();
 		dao.init(file);
+		
+		logger.debug("Récuperaton console des données");
 
 		final List<Tirage> tirages = dao.findAllTirage();
 
 		for (final Tirage tirage : tirages) {
-			logger.debug("* " + tirage.getAnnee());
+			logger.info("* " + tirage.getAnnee());
 		}
+		
+		logger.debug("Lancemement de l'IHM");	
 
 		@SuppressWarnings("unused")
 		final MainMenu test = new MainMenu();
