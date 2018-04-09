@@ -27,4 +27,4 @@ Pour installer le projet veuillez suivre la procédure suivante :
 	- Lancer le projet via le Launcher situé dans "/src/main/java/fr/esiea/glpoo"
 		lancer le avec le fichier Launcher.java
 		
-	
+Les images enregistrées lors de l'exécution du projet se retrouveront dans le dossier "/images/"	
