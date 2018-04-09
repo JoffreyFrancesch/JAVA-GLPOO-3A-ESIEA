@@ -1,0 +1,30 @@
+Notice du groupe de GLPOO 3A FRANCESCHINI
+
+Membres du groupe :
+	Joffrey Franceschini
+	Ilyes Ihadjadene
+	William Choukroun
+	Nizar Zidouh
+	Mehdi Soltana
+	Kevin Berdah
+	Younes Ghenai
+
+Pour installer le projet veuillez suivre la procédure suivante :
+
+	- Télécharger le projet sur GitHub disponible ici : 
+		https://github.com/JoffreyFrancesch/JAVA-GLPOO-3A-FRANCESCHINI
+		
+		* via un clone
+		* ou en prenant la dernière release 
+	
+	- Importer le projet dans eclipse
+
+	- Lancer les test JUnit se trouvant dans "/src/test/java/tirage/"
+		lancer les avec le fichier CsvTirageTest.java
+
+		12 tests doivent être passés sans échec
+
+	- Lancer le projet via le Launcher situé dans "/src/main/java/fr/esiea/glpoo"
+		lancer le avec le fichier Launcher.java
+		
+	
